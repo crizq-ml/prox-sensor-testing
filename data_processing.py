@@ -4,8 +4,9 @@ import csv
 from typing import Dict, List, Tuple
 
 # Configuration
-EXCEL_FILE = 'Proximity Sensor Test - Sample units.xlsx'
+EXCEL_FILE = 'startup cal units.xlsx'
 COLUMN_INDEX = 0
+OUTPUT_CSV = 'day1.0_extracted_sensor_data.csv'
 
 # Define the text keys to look for
 KEY_TEXTS = [
@@ -159,7 +160,7 @@ def main():
         print(f"  First 5 Entries: {data_array[:5]}")
     
     # --- Final Step: Function Call to write data to CSV ---
-    output_filename = 'extracted_sensor_data.csv'
+    output_filename = OUTPUT_CSV
     write_to_csv(output_filename, final_csv_rows) 
     # The final_csv_rows list is correctly structured as a list of lists:
     # [['Sheet1', 'val1', 'val2', 'val3', 'val4', 'val5'], ['Sheet2', 'val1', ...], ...]
