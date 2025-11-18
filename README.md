@@ -12,17 +12,17 @@ This repository contains a simple, yet robust **Python script** designed to auto
 
 ## 📄 Overview
 
-This script processes a multi-tab Microsoft Excel file containing proximity sensor test data. It automates the extraction of five specific key performance indicator (KPI) values from the **first column (Column A)** of every sheet/tab and compiles the results into a single, structured CSV file.
+The `data_processing.py` script processes a multi-tab Microsoft Excel file containing proximity sensor test data. It automates the extraction of five specific key values from the **first column (Column A)** of every sheet/tab and compiles the results into a single, structured CSV file.
 
 Each sheet in the input Excel file is treated as a record for one tested unit, with the **sheet name used as the Serial Number** in the output.
 
 ## 🛠️ Prerequisites
 
-To run this script, you must have **Python 3** installed, along with the following libraries:
+To run this script, you must have **Python 3** installed with the following libraries:
+- pandas
+- openpyxl
 
-### 1. Install Dependencies
-
-Install the required libraries using pip:
+### Install the required libraries using pip:
 
 ```bash
 pip install pandas openpyxl
@@ -30,11 +30,13 @@ pip install pandas openpyxl
 
 ## ⚙️ Configuration
 
-Before running, ensure your input file and key phrases match the script's configuration:
+Before running, ensure your input file and key phrases within the input file match the script's configuration:
 
 ### 1. Input File
 
-* Place your Excel file, named **`Proximity Sensor Test - Sample units.xlsx`**, in the same directory as the Python script.
+* Place your Excel file, named **`Proximity Sensor Test - Sample units.xlsx`**, in the _**same directory**_ as the Python script.
+
+  * _if you choose to rename your file, make sure you change the `EXCELL_FILE` variable in the `data_processing.py` script_
 
 ### 2. Extracted Data Keys (`KEY_TEXTS`)
 
@@ -48,6 +50,15 @@ The script searches for these specific text strings in **Column A** of each shee
 | use_3 average at detected: | `use_3 average at detected: ` | 
 | PHASE_3_STARTUP_THRESHOLD: | `PHASE_3_STARTUP_THRESHOLD: ` | 
 | Calculated PHASE_3_STARTUP_CONFIG: | `Calculated PHASE_3_STARTUP_CONFIG: ` | 
+
+### 3. Output File
+
+* If you would like your output file named something other than `extracted_sensor_data.csv`, change the variable `OUTPUT_CSV` at the top of `data_processing.py`
+  
+> [!CAUTION]
+> If you are running multiple data files, make sure you change the output file name. Either directly after you run the script and before you run the second OR in the `data_processing.py` script!
+> If this isn't done, you will overwrite the data previously saved
+
 
 ## ▶️ How to Run the Script
 
