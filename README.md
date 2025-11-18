@@ -34,7 +34,7 @@ Before running, ensure your input file and key phrases within the input file mat
 
 ### 1. Input File
 
-* Place your Excel file, named **`Proximity Sensor Test - Sample units.xlsx`**, in the _**same directory**_ as the Python script.
+* Place your Excel file, named **`data.xlsx`**, in the _**same directory**_ as the Python script.
 
   * _if you choose to rename your file, make sure you change the `EXCELL_FILE` variable in the `data_processing.py` script_
 
