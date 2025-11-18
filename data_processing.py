@@ -4,9 +4,9 @@ import csv
 from typing import Dict, List, Tuple
 
 # Configuration
-EXCEL_FILE = 'startup cal units.xlsx'
+EXCEL_FILE = 'data.xlsx'
 COLUMN_INDEX = 0
-OUTPUT_CSV = 'day1.0_extracted_sensor_data.csv'
+OUTPUT_CSV = 'extracted_sensor_data.csv'
 
 # Define the text keys to look for
 KEY_TEXTS = [
@@ -166,4 +166,5 @@ def main():
     # [['Sheet1', 'val1', 'val2', 'val3', 'val4', 'val5'], ['Sheet2', 'val1', ...], ...]
     
 if __name__ == '__main__':
+
     main()
