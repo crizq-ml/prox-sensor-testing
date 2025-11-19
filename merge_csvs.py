@@ -3,10 +3,10 @@ import os
 
 # --- Configuration ---
 # List the names of your input CSV files
-input_files = ['day1.0_extracted_sensor_data.csv', 'day1.1_extracted_sensor_data.csv', 'day2.0_extracted_sensor_data.csv']
+input_files = ['merged_sensor_data.csv', 'day3.0_extracted_sensor_data.csv']
 
 # Name for the merged output file
-output_file = 'merged_sensor_data.csv'
+output_file = 'final_merged_sensor_data.csv'
 
 # List to hold the dataframes read from each file
 all_data = []

@@ -4,9 +4,9 @@ import csv
 from typing import Dict, List, Tuple
 
 # Configuration
-EXCEL_FILE = 'Prox Sensor Calibration Grounding Data Only (Trial 2).xlsx'
+EXCEL_FILE = 'Proximity Sensor Test - Sample Units - Day3.xlsx'
 COLUMN_INDEX = 0
-OUTPUT_CSV = 'grounding_test_data_trial2.csv'
+OUTPUT_CSV = 'day3.0_extracted_sensor_data.csv'
 
 # Define the text keys to look for
 KEY_TEXTS = [
