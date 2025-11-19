@@ -38,6 +38,8 @@ Before running, ensure your input file and key phrases within the input file mat
 
   * _if you choose to rename your file, make sure you change the `EXCELL_FILE` variable in the `data_processing.py` script_
 
+  * _all previously processed data files are placed in the `processed data files` (for the final .csv files) or `raw data files` (for the initial .xlsx) folder accordingly to avoid double processing_
+
 ### 2. Extracted Data Keys (`KEY_TEXTS`)
 
 The script searches for these specific text strings in **Column A** of each sheet. The value immediately following the text (in the same cell, after the colon) is extracted.
